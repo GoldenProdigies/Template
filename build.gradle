@@ -5,13 +5,21 @@
  */
 
 buildscript {
+
+    // Kotlin - Julian
+    // TODO: Update Kotlin version when needed
+    ext.kotlin_version = '2.3.20'
+
     repositories {
         mavenCentral()
         google()
     }
     dependencies {
         // Note for FTC Teams: Do not modify this yourself.
+        //noinspection AndroidGradlePluginVersion
         classpath 'com.android.tools.build:gradle:8.7.0'
+        // Kotlin - Julian
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
