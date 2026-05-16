@@ -8,7 +8,7 @@ buildscript {
 
     // Kotlin - Julian
     // TODO: Update Kotlin version when needed
-    ext.kotlin_version = '2.3.20'
+    ext.kotlin_version = '2.3.21
 
     repositories {
         mavenCentral()

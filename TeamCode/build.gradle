@@ -14,12 +14,11 @@
 // Include common definitions from above.
 apply from: '../build.common.gradle'
 apply from: '../build.dependencies.gradle'
+apply plugin: 'kotlin-android' // Added Kotlin Plugin
 
 // Kotlin - Julian
 apply plugin: 'kotlin-android'
 
-// Sloth - Julian
-apply plugin: 'dev.frozenmilk.sinister.sloth.load'
 
 android {
     namespace = 'org.firstinspires.ftc.teamcode'
@@ -29,41 +28,26 @@ android {
     }
 }
 
-// Sloth - Julian
-buildscript {
-    repositories {
-        mavenCentral()
-        maven {url "https://repo.dairy.foundation/releases"}}
-    dependencies {
-        classpath "dev.frozenmilk:Load:0.2.4"
-    }
-}
-
-repositories {
-    // Sloth - Julian
-    maven {url = "https://repo.dairy.foundation/releases"}
-    maven {url = "https://repo.dairy.foundation/snapshots"}
-}
-
 dependencies {
     implementation project(':FtcRobotController')
 
-    // NextFTC - Julian
+    // NextFTC
     implementation("dev.nextftc:ftc:1.1.0")
     implementation("dev.nextftc:hardware:1.1.0")
 
-    // NextFTC NextControl2 - Julian
-    implementation("dev.nextftc:control2:0.0.3")
+    // NextControl
+    implementation("dev.nextftc:control:1.0.0")
 
-    // NextFTC NextBindings - Julian
+    // NextBindings
     implementation("dev.nextftc:bindings:1.0.1")
 
-    // NextFTC PedroPathing Extension - Julian
+    // NextFTC Pedro Pathing Extension
     implementation("dev.nextftc.extensions:pedro:1.0.0")
 
-    // Sloth - Julian
-    implementation("dev.frozenmilk.sinister:Sloth:0.2.4")
+    // Pedro Pathing
+    implementation 'com.pedropathing:ftc:2.1.2'
+    implementation 'com.pedropathing:telemetry:1.0.0'
 
-    // Modified Panels for Sloth
-    implementation("com.bylazar.sloth:fullpanels:0.2.4+1.0.12")
+    // Panels
+    implementation 'com.bylazar:fullpanels:1.0.12'
 }
