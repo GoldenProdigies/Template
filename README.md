@@ -6,4 +6,4 @@ This repository is the template #18592 Golden Prodigies uses for their codebases
 ## Libraries installed
 - NextFTC
 - PedroPathing
-- Sloth
+- Panels
